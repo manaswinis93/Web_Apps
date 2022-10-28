@@ -1,10 +1,28 @@
 <html>
   <body>
-    <h1> ARTISTS </h1>
-     <% @artists.each do |artist| %>
-     <div>
-      <a href = "/artists/<%= artist.id%>"><%= artist.name %></a>
-      </div>
-      <% end %>
+    <h1> List of ARTISTS </h1>
+      <p>
+         <label>Please click on each Artist for more information</label>
+      </p>
+      <% @artists.each do |artist| %>
+        <div>
+          <a href = "/artists/<%= artist.id%>"><%= artist.name %></a>
+        </div>
+       <% end %>
+    
+      <p>
+        <div>
+          <label> To add a new Artist </label>
+          <a href = "/artists/new">Click Here!</a>
+        </div>
+    
+        <div>
+          <a href = "/">Back to Homepage</a>
+        </div>
+      </p>
     </body>
+
+    
+
+
   </html>

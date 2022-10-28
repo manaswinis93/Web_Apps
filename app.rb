@@ -71,4 +71,7 @@ class Application < Sinatra::Base
     @artist = repo.find(params[:id])
     return erb(:get_artist_id)
   end
+  get '/' do
+    return erb(:homepage)
+  end
 end

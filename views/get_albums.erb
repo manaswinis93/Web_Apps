@@ -1,13 +1,28 @@
 <html>
   <head></head>
   <body>
-    <h1>Albums</h1>
+    <h1>List of Albums</h1>
+     <p>
+      <div>
+        <label>Please click on the album title for more information<br /></label> 
+      </div>
+     </p>
+      <% @albums.each do |album| %>
+        <div>
+          <a href = "/albums/<%= album.id%>"><%= album.title %></a><br />
+        </div>
+      <% end %>
 
-    <% @albums.each do |album| %>
-    <div>
-      <a href = "/albums/<%= album.id%>"><%= album.title %></a><br />
-    </div>
+    <p>
+      <div>
+       <label> To add a new Album </label>
+       <a href = "/albums/new">Click Here!</a>
+      </div>
+  
+      <div>
+       <a href = "/">Back to Homepage</a>
+      </div>
+    </p>
 
-    <% end %>
   </body>
 </html>
